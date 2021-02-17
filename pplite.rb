@@ -1,9 +1,8 @@
 class Pplite < Formula
-  desc 'PPLite is an open-source C++ library implementing the abstract domain of convex polyhedra, to be used in tools for static analysis and verification.'
-  homepage 'http://www.cs.unipr.it/~zaffanella/PPLite/PPLite.html'
-  url 'http://www.cs.unipr.it/~zaffanella/PPLite/releases/pplite-0.5.1.tar.gz'
-  version '0.5.1'
-  sha256 '028e68d8fa406dfcd78d259fa6612fabd4163c9615de689ab8c12016c9dd81b9'
+  desc 'C++ library implementing the abstract domain of convex polyhedra, to be used in tools for static analysis and verification.'
+  homepage 'https://www.cs.unipr.it/~zaffanella/PPLite/PPLite.html'
+  url 'https://www.cs.unipr.it/~zaffanella/PPLite/releases/pplite-0.7.tar.gz'
+  sha256 '66f5a3371fa6e91d93713f3f4eb31e1d07cc3742826565d93fff41326ffaa3cb'
   depends_on 'flint' => :build
 
   def install
