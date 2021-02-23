@@ -17,14 +17,14 @@ class Monaa < Formula
     system 'cmake', '..', '-DCMAKE_BUILD_TYPE=Release', "-DCMAKE_INSTALL_PREFIX=#{prefix}", *std_cmake_args
     system "make", "monaa", "tre2ta"
     system "make", "install"
-    system "install" "-m755" "tre2ta" "#{prefix}/bin"
+    system "install", "-m755", "tre2ta", "#{prefix}/bin"
     if File.exist? '../doc/monaa.1' then
       mkdir_p "#{prefix}/share/man/man1/"
       system 'install', '../doc/monaa.1', "#{prefix}/share/man/man1/"
     end
     if File.exist? "../doc/tre2ta.1" then
       mkdir_p "#{prefix}/share/man/man1/"
-      system "install" "-m644" "../doc/tre2ta.1" "#{prefix}/share/man/man1/"
+      system "install", "-m644", "../doc/tre2ta.1", "#{prefix}/share/man/man1/"
     end
   end
 
