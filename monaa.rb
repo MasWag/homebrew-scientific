@@ -29,7 +29,7 @@ class Monaa < Formula
   end
 
   test do
-    system "#{bin}/monaa", "-v"
+    system "#{bin}/monaa", "-V"
   end
 end
 
