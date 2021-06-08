@@ -12,6 +12,28 @@ class Pplite < Formula
   end
 
   test do
-    system "#{bin}/phaverlite", "-v"
+   (testpath/"test.c").write <<~EOS
+      #include <mxml.h>
+
+      int main()
+      {
+        FILE *fp;
+        mxml_node_t *tree;
+        mxml_node_t *tree;
+
+        fp = fopen("test.xml", "r");
+        tree = mxmlLoadFile(NULL, fp, MXML_OPAQUE_CALLBACK);
+        fclose(fp);
+      }
+    EOS
+
+    (testpath/"test.xml").write <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <test>
+        <text>I'm an XML document.</text>
+      </test>
+    EOS
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lmxml", "-o", "test"
+    system "./test"
   end
 end
