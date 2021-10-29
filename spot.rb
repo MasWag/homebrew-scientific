@@ -1,18 +1,20 @@
-# coding: utf-8
+# typed: false
+# frozen_string_literal: true
+
 class Spot < Formula
-  desc 'Platform for LTL and ω-automata manipulation'
-  homepage 'https://spot.lrde.epita.fr/'
-  url 'http://www.lrde.epita.fr/dload/spot/spot-2.9.6.tar.gz'
-  version '2.9.6'
-  sha256 '3cc6f69f17f0d1566d68be7040099df70203748b66121354d8ab84d8d13dd3a8'
+  desc "Platform for LTL and omega-automata manipulation"
+  homepage "https://spot.lrde.epita.fr/"
+  url "http://www.lrde.epita.fr/dload/spot/spot-2.9.8.tar.gz"
+  sha256 "b7f404bb90a335a5914384ecc3fc3a2021ff22c57ee97a40c07bb2ab40e20cf9"
+  license "GPL-3.0"
 
   def install
-    system './configure', "--prefix=#{prefix}"
-    system 'make'
-    system 'make', 'install'
+    system "./configure", "--prefix=#{prefix}"
+    system "make"
+    system "make", "install"
   end
 
   test do
-    system "#{bin}/genaut", '-v'
+    `#{bin}/genaut --version`.include?(version)
   end
 end
