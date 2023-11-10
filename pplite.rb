@@ -1,9 +1,10 @@
 class Pplite < Formula
   desc "C++ library implementing the abstract domain of convex polyhedra"
-  homepage "https://www.cs.unipr.it/~zaffanella/PPLite/PPLite.html"
-  url "https://www.cs.unipr.it/~zaffanella/PPLite/releases/pplite-0.7.tar.gz"
-  sha256 "66f5a3371fa6e91d93713f3f4eb31e1d07cc3742826565d93fff41326ffaa3cb"
+  homepage "https://github.com/ezaffanella/PPLite"
+  url "https://github.com/ezaffanella/PPLite/raw/main/releases/pplite-0.10.2.tar.gz"
+  sha256 "18f34817e5fb10e11931a587bc4466d5a459a8ce8abe0d17404ad41cb7a27fa8"
   depends_on "flint" => :build
+  depends_on "libmxml" => :test
 
   def install
     system "./configure", "--prefix=#{prefix}"
@@ -19,7 +20,6 @@ class Pplite < Formula
       {
         FILE *fp;
         mxml_node_t *tree;
-        mxml_node_t *tree;
 
         fp = fopen("test.xml", "r");
         tree = mxmlLoadFile(NULL, fp, MXML_OPAQUE_CALLBACK);
@@ -33,7 +33,7 @@ class Pplite < Formula
         <text>I'm an XML document.</text>
       </test>
     EOS
-    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lmxml", "-o", "test"
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-L/usr/local/lib", "-L/opt/homebrew/lib", "-lmxml", "-o", "test"
     system "./test"
   end
 end
