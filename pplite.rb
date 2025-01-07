@@ -1,8 +1,8 @@
 class Pplite < Formula
   desc "C++ library implementing the abstract domain of convex polyhedra"
   homepage "https://github.com/ezaffanella/PPLite"
-  url "https://github.com/ezaffanella/PPLite/raw/main/releases/pplite-0.10.2.tar.gz"
-  sha256 "18f34817e5fb10e11931a587bc4466d5a459a8ce8abe0d17404ad41cb7a27fa8"
+  url "https://github.com/ezaffanella/PPLite/raw/main/releases/pplite-0.12.tar.gz"
+  sha256 "f6aba554421944f1d5e469d59a9eb99ccac6ad4c111a447c8bc3916cb7476f51"
   depends_on "flint" => :build
   depends_on "libmxml" => :test
 
