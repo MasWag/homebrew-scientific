@@ -28,4 +28,8 @@ cask "uppaal" do
     "~/Library/Preferences/org.uppaal.uppaal.plist",
     "~/Library/Saved Application State/org.uppaal.uppaal.savedState"
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
