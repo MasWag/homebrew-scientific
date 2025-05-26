@@ -1,10 +1,10 @@
 class Monaa < Formula
   desc "Tool for timed patten matching with automata-based acceleration"
   homepage "https://github.com/MasWag/monaa"
-  url "https://github.com/MasWag/monaa/archive/0.5.3.zip"
-  version "0.5.3"
+  url "https://github.com/MasWag/monaa/archive/0.5.4.zip"
+  version "0.5.4"
   head "https://github.com/MasWag/monaa.git"
-  sha256 "b6506f152491aeed88b7bcfe541d060dc167ab83b55edc5e381d8dfa7587af6c"
+  sha256 "4aac822e21fc6803fbdd2f0d34cb09e21028afa739a0be74264d093ec3ca594f"
   depends_on "cmake" => :build
   depends_on "boost" => :build
   depends_on "eigen" => :build
