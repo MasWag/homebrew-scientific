@@ -3,7 +3,7 @@ class Symon < Formula
   homepage "https://github.com/MasWag/symon"
   version "0.1.0"
   license "MIT"
-  head "https://github.com/MasWag/symon.git", branch: "new_syntax"
+  head "https://github.com/MasWag/symon.git"
 
   depends_on "boost"
   depends_on "cmake" => :build
