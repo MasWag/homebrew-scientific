@@ -7,6 +7,7 @@ class Symon < Formula
 
   depends_on "boost"
   depends_on "cmake" => :build
+  depends_on "pkgconf" => :build
   depends_on "ppl"
   depends_on "tree-sitter"
   depends_on "tree-sitter-symon"
