@@ -14,7 +14,7 @@ cask "uppaal" do
     end
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
   depends_on formula: "openjdk"
 
   app "UPPAAL-#{version}.app"
