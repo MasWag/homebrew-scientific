@@ -4,8 +4,8 @@
 class Nusmv < Formula
   desc "A new symbolic model checker"
   homepage "http://nusmv.fbk.eu"
-  url "https://nusmv.fbk.eu/distrib/2.7.0/NuSMV-2.7.0.tar.xz"
-  sha256 "bf5b14c4e2ca1f5e8404c8ce75825183d8f5842063cb1e58e073d92bb1234828"
+  url "https://nusmv.fbk.eu/distrib/2.7.1/NuSMV-2.7.1.tar.xz"
+  sha256 "f1e11931f71d98aa9b84181eed67db584d7111100c2e967c904a31c15f823f60"
   license "LGPLv2.1"
   depends_on "meson" => :build
   depends_on "ninja" => :build
