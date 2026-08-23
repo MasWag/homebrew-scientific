@@ -33,7 +33,7 @@ class Pplite < Formula
         <text>I'm an XML document.</text>
       </test>
     EOS
-    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-L/usr/local/lib", "-L/opt/homebrew/lib", "-lmxml", "-o", "test"
+    system ENV.cc, "test.c", "-I/opt/homebrew/include/libmxml4", "-I#{include}", "-L#{lib}", "-L/usr/local/lib", "-L/opt/homebrew/lib", "-lmxml", "-o", "test"
     system "./test"
   end
 end
